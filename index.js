@@ -11,9 +11,9 @@ function pokemon() {
 
       document.getElementById("nome").innerHTML = data["name"];
       document.getElementById("numero").innerHTML = data["id"];
-      document.getElementById(
-        "foto"
-      ).src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data["id"]}.svg`;
+      let pic = data["sprites"]["front_default"];
+      console.log(pic);
+      document.getElementById("foto").setAttribute('src', pic);
       document.getElementById("foto").style.display = "block";
     })
     .catch((error) => {

@@ -36,14 +36,11 @@ input {
 
 .Card {
   align-items: center;
-  background-color: #cc0000;
+  background-color: #b14848;
   display: flex;
   flex-direction: column;
-  height: 420px;
-  width: 300px;
-}
-
-#foto {
-  height: 250px;
+  height: 300px;
   width: 200px;
 }
+
+
