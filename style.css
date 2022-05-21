@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+header {
+  background-color: #3b4cca;
+  height: 70px;
+  width: 1024px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 768px;
+  width: 1024px;
+  background-color: white;
+}
+footer {
+  height: 70px;
+  width: 1024px;
+  background-color: #ffde00;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #cc0000;
+  height: 420px;
+  width: 300px;
+}
+
+#foto {
+  height: 200px;
+  width: 150px;
+}
