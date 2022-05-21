@@ -7,34 +7,43 @@ body {
   background-color: #000000;
 }
 header {
+  align-items: center;
   background-color: #3b4cca;
+  display: flex;
+  justify-content: center;
   height: 70px;
   width: 1024px;
 }
 main {
-  display: flex;
   align-items: center;
+  background-color: white;
+  display: flex;
   justify-content: center;
   height: 768px;
   width: 1024px;
-  background-color: white;
 }
 footer {
+  background-color: #ffde00;
   height: 70px;
   width: 1024px;
-  background-color: #ffde00;
+}
+
+input {
+  height: 25px;
+  text-align: center;
+  width: 300px;
 }
 
 .Card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: #cc0000;
+  display: flex;
+  flex-direction: column;
   height: 420px;
   width: 300px;
 }
 
 #foto {
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 200px;
 }
