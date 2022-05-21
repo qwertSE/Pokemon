@@ -1,26 +1,23 @@
 function pokemon() {
-  let id = document.getElementById("find").value;
+  let id = new String(document.getElementById("find").value).toLowerCase();
 
   let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  if (id >= 1 && id <= 649) {
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        document.getElementById("pokeinfo").style.display = "block";
-        
-        document.getElementById("nome").innerHTML = data["name"];
-        document.getElementById("numero").innerHTML = data["id"];
-        document.getElementById(
-          "foto"
-        ).src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
-        document.getElementById("foto").style.display = "block";
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  } else {
-    alert("Provavelmente o que você está procurando não existe...");
-  }
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      document.getElementById("pokeinfo").style.display = "block";
+
+      document.getElementById("nome").innerHTML = data["name"];
+      document.getElementById("numero").innerHTML = data["id"];
+      document.getElementById(
+        "foto"
+      ).src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data["id"]}.svg`;
+      document.getElementById("foto").style.display = "block";
+    })
+    .catch((error) => {
+      alert("Verifique se o nome ou o número está correto.");
+      console.log(error);
+    });
 }
