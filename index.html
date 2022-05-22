@@ -4,28 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- START CSS + JS  -->
+
+    <!-- START CSS + JS + FONTS  -->
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <!--  CSS + JS END -->
+
     <title>PokeInfo</title>
   </head>
   <body>
     <header>
+      <h2 id="pokedex">Pokedex</h2>
       <form>
         <input type="text" id="find" placeholder="Nome ou Número do pokemon" />
-        <button type="button" onclick="pokemon()">Buscar</button>
+        <button type="button" onclick="loadPokemon()">Buscar</button>
       </form>
     </header>
     <main>
       <section id="pokeinfo" style="display: none">
         <div class="Card">
-          <h2 id="nome"></h2>
-          <h3 id="numero"></h3>
-          <img id="foto" src="" alt="Foto do Pokemon" style="display: none" />
+          <figure id="poke-figure">
+            <img id="foto" src="" alt="Foto do Pokemon" style="display: none" />
+          </figure>
+          <div class="Card__info">
+            <h3 id="numero"></h3>
+            <h2 id="nome"></h2>
+            <h1 class="background" id="tipo" ></h1>
+          </div>
+          
         </div>
       </section>
     </main>
     <footer></footer>
+    <script>
+      var form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        loadPokemon();
+      }); // <--- isto pára o envio do form
+    </script>
   </body>
 </html>
