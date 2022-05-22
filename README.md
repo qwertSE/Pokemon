@@ -1,3 +1,7 @@
 # Pokémon! Temos que pegar.
 
-Projeto desenvolvido para aprendizado e em construção.
+Projeto desenvolvido para aprendizado.
+
+
+
+# Em construção...
