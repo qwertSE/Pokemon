@@ -1,3 +1,21 @@
+const colors = {
+	fire: '#FDDFDF',
+	grass: '#DEFDE0',
+	electric: '#FCF7DE',
+	water: '#DEF3FD',
+	ground: '#f4e7da',
+	rock: '#d5d5d4',
+	fairy: '#fceaff',
+	poison: '#b97fc9',
+	bug: '#f8d5a3',
+	dragon: '#97b3e6',
+	psychic: '#ec91c6',
+	flying: '#F5F5F5',
+	fighting: '#E6E0D4',
+	normal: '#F5F5F5'
+};
+
+
 function loadPokemon() {
   let id = new String(document.getElementById("find").value).toLowerCase();
 
@@ -17,6 +35,7 @@ function loadPokemon() {
       let tipo = data.types[0].type.name;
       document.getElementById("tipo").innerHTML = tipo;
       document.getElementById("tipo").className = `background-${tipo}`;
+      document.getElementById("pokeinfo__card").style.backgroundColor = colors[tipo];
     })
     .catch((error) => {
       alert("Verifique se o nome ou o número está correto.");
