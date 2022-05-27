@@ -1,39 +1,36 @@
 body {
+  background: #efefbb;
+  background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100vh;
 }
+
+/* HEADER */
 header {
   align-items: center;
   background-color: #3b4cca;
   display: flex;
   justify-content: center;
+
   height: 70px;
-  width: 1024px;
+  width: 100vw;
 }
 
 #pokedex {
   color: #f8cc47;
-  text-shadow: 0.1em 0.1em 0.2em #0A285F;
+
   font-size: 2.5em;
   font-family: "Koulen", cursive;
+
   margin-right: 25px;
+  text-shadow: 0.1em 0.1em 0.2em #0a285f;
 }
-main {
-  align-items: center;
-  background-color: #fffff5;
-  display: flex;
-  justify-content: center;
-  height: 768px;
-  width: 1024px;
-}
-footer {
-  background-color: #ffde00;
-  height: 70px;
-  width: 1024px;
-}
+
 
 input {
   height: 25px;
@@ -41,9 +38,21 @@ input {
   width: 300px;
 }
 
+/* /HEADER */
+
+/* MAIN */
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 1024px;
+}
+
 .Card {
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -55,23 +64,32 @@ input {
 }
 
 .Card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
   height: 150px;
   width: 200px;
-  background-color: #FFFFFF;
+
+  background-color: #ffffff;
 }
 
 #numero {
-  margin: 5px 0px 0px 10px;
-  height:30px;
-  width:200px;
+  text-align: center;
   font-family: "Roboto", sans-serif;
+
+  height: 50px;
+  width: 200px;  
 }
 
 #nome {
-  margin-left: 10px;
-  height:30px;
-  width:200px;
+  text-align: center;
   font-family: "Roboto", sans-serif;
+
+  margin-bottom: 2rem;
+  height: 20px;
+  width: 200px;
 }
 
 #nome:first-letter {
@@ -79,15 +97,30 @@ input {
 }
 
 #tipo {
-  margin-left: 10px;
-  height:30px;
-  width:85px;  
+  margin: 0rem 0rem 0.3rem 0rem;
+  height: 50px;
+  width: 85px;
+
+  font-size: 1.5em;
   font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 #tipo:first-letter {
   text-transform: capitalize;
 }
+
+/* /MAIN */
+
+/* FOOTER */
+
+footer {
+  background-color: #ffde00;
+  height: 4.5rem;
+  width: 100vw;
+}
+
+/* /FOOTER */
 
 /* Tipos */
 
