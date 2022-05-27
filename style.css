@@ -21,6 +21,10 @@ header {
   width: 100vw;
 }
 
+header a {
+  text-decoration: none;
+}
+
 #pokedex {
   color: #f8cc47;
 
@@ -187,7 +191,7 @@ footer {
 }
 
 .background-psychic {
-  background-color: #f366b9;
+  background-color: #ec91c6;
   color: #fff !important;
 }
 
@@ -217,7 +221,7 @@ footer {
 }
 
 .background-ground {
-  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: linear-gradient(180deg, #f7de3f 50%, #947900 50%);
   background-color: #f7de3f;
   color: #212121 !important;
 }

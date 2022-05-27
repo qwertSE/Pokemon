@@ -3,16 +3,18 @@ const colors = {
 	grass: '#DEFDE0',
 	electric: '#FCF7DE',
 	water: '#DEF3FD',
-	ground: '#f4e7da',
-	rock: '#d5d5d4',
+	ground: '#947900',
+	rock: '#a38c21',
 	fairy: '#fceaff',
 	poison: '#b97fc9',
-	bug: '#f8d5a3',
+	bug: '#729f3f',
 	dragon: '#97b3e6',
 	psychic: '#ec91c6',
 	flying: '#F5F5F5',
 	fighting: '#E6E0D4',
-	normal: '#F5F5F5'
+	normal: '#F5F5F5',
+  ice: '#51c4e7',
+  ghost: '#7b62a3'
 };
 
 
