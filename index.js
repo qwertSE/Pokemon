@@ -6,16 +6,18 @@ const colors = {
   water: "#DEF3FD",
   ground: "#947900",
   rock: "#a38c21",
-  fairy: "#fceaff",
+  fairy: "#fdb9e9",
   poison: "#b97fc9",
   bug: "#729f3f",
   dragon: "#97b3e6",
   psychic: "#ec91c6",
   flying: "#F5F5F5",
-  fighting: "#E6E0D4",
+  fighting: "#d56723",
   normal: "#F5F5F5",
   ice: "#51c4e7",
   ghost: "#7b62a3",
+  steel: "#9eb7b8",
+  dark: "#240101"
 };
 
 regex = /\d[0-9]{0,3}/;
@@ -43,22 +45,29 @@ function loadPokemon(id) {
         colors[tipo];
     })
     .catch((error) => {
-      alert("Verifique se o nome ou o número está correto.");
+      error();
       console.log(error);
     });
 }
 
-function goBack() {
+function goBackOrNext(value) {
   let numberNow = document.getElementById("numero").innerHTML;
   let result = parseInt(numberNow.match(regex));
-  result--;
-  
-  result >= 1 ? loadPokemon(result) : loadPokemon(result+1)
+  console.log(`O valor de result: ${result}`);
+  console.log(`O valor de value: ${value}`);
+  if(value==='next'){
+    result++;
+    
+    result <= 898 ? loadPokemon(result) : error();
+    
+  }else{
+    result--;
+
+    result >= 1 ? loadPokemon(result) : error();
+    loadPokemon(result);
+  }
 }
 
-function goNext() {
-  let numberNow = document.getElementById("numero").innerHTML;
-  let result = parseInt(numberNow.match(regex));
-  result++;
-  result <= 898 ? loadPokemon(result) : loadPokemon(result-1)
+function error(){
+  alert("Ops...talvez esse pokemon não exista aqui ainda. :( ");
 }
