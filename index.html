@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS + JS + FONTS  -->
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koulen&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&family=Overpass:wght@500&family=Roboto&display=swap" rel="stylesheet">
     <!--  CSS + JS END -->
 
     <title>PokeInfo</title>
@@ -24,7 +23,7 @@
       <a href="./index.html"><h2 id="pokedex">Pokedex</h2></a>
       <form>
         <input type="text" id="find" placeholder="Nome ou Número do pokemon" />
-        <button type="button" onclick="loadPokemon()">Buscar</button>
+        <button type="button" onclick="pesquisa()">Buscar</button>
       </form>
     </header>
     <main>
@@ -38,16 +37,27 @@
             <h2 id="nome"></h2>
             <h1 class="background" id="tipo"></h1>
           </div>
-          
+        </div>
+        <div class="GoBack-Advanced">
+          <button id="btn" onclick="goBack()"><</button>Go Back | Go Next
+          <button id="btn" onclick="goNext()">></button>
         </div>
       </section>
     </main>
     <footer></footer>
     <script>
+      
+      function pesquisa() {
+        let id = new String(document.getElementById("find").value).toLowerCase();
+        loadPokemon(id);
+      }
       var form = document.querySelector("form");
       form.addEventListener("submit", function (e) {
+        let id = new String(
+          document.getElementById("find").value
+        ).toLowerCase();
         e.preventDefault();
-        loadPokemon();
+        loadPokemon(id);
       }); // <--- isto pára o envio do form
     </script>
   </body>

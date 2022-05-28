@@ -125,6 +125,20 @@ backdrop-filter: blur(1.4px);
   text-transform: capitalize;
 }
 
+.GoBack-Advanced{
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+
+  margin-top: 1rem;
+
+  font-family: 'Overpass', sans-serif;
+}
+
+#btn{
+  border-radius: 10px;
+}
+
 /* /MAIN */
 
 /* FOOTER */
