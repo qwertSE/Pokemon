@@ -20,11 +20,15 @@ const colors = {
   dark: "#240101"
 };
 
+//Selecionando somente os numeros.
 regex = /\d[0-9]{0,3}/;
 
 // fim
 
+
+//Função de coleta de informações do pokemon selecionado.
 function loadPokemon(id) {
+
   let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   fetch(url)
     .then((response) => {
@@ -35,14 +39,17 @@ function loadPokemon(id) {
 
       document.getElementById("nome").innerHTML = data["name"];
       document.getElementById("numero").innerHTML = `#${data["id"]}`;
+
       let pic = data["sprites"]["front_default"];
       document.getElementById("foto").setAttribute("src", pic);
       document.getElementById("foto").style.display = "block";
+
       let tipo = data.types[0].type.name;
       document.getElementById("tipo").innerHTML = tipo;
       document.getElementById("tipo").className = `background-${tipo}`;
       document.getElementById("pokeinfo__card").style.backgroundColor =
         colors[tipo];
+
     })
     .catch((error) => {
       error();
@@ -50,11 +57,12 @@ function loadPokemon(id) {
     });
 }
 
+//Função dos botões de avançar e retroceder.
 function goBackOrNext(value) {
+
   let numberNow = document.getElementById("numero").innerHTML;
   let result = parseInt(numberNow.match(regex));
-  console.log(`O valor de result: ${result}`);
-  console.log(`O valor de value: ${value}`);
+
   if(value==='next'){
     result++;
     
