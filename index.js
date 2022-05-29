@@ -64,7 +64,6 @@ function goBackOrNext(value) {
     result--;
 
     result >= 1 ? loadPokemon(result) : error();
-    loadPokemon(result);
   }
 }
 
